@@ -1,0 +1,18 @@
+Asol Reports Enterprise 4.4.9 - HowTo Print sqlQuery
+
+---------------------------------------------------------
+
+File: modules/AOR_Reports/AOR_Report.php
+Line 550: before return $query;
+
+//
+echo '<button>Show SQL</button>
+<div class="sqlreport"><pre style="background: #33ccff; padding: 20px"><code>';
+echo $query;
+echo '</code></pre></div><br /><br />
+<script>
+$( ".sqlreport" ).hide();
+$( "button" ).click(function() { $( ".sqlreport" ).slideToggle( "slow" ); });
+</script>
+';
+
